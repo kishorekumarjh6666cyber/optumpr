@@ -68,10 +68,6 @@ host_server=dbutils.secrets.get(scope="optumdbxscope", key="azurehostname")
 
 # COMMAND ----------
 
-print(host_server)
-
-# COMMAND ----------
-
 def write2silver(df,filename):
     silver_path = "abfss://stgformedallion@adlsformedalion.dfs.core.windows.net/medallion/silver/"
     temp_path = f"{silver_path}/output_temp"
