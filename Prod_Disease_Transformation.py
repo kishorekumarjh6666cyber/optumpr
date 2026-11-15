@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
 from pyspark.sql.functions import *
 
 # COMMAND ----------
@@ -37,7 +41,7 @@ disease_df=read_bronze_csv("disease")
 
 # COMMAND ----------
 
-display(disease_df.limit(20))
+disease_df.groupBy("disease_name").count().show()
 
 # COMMAND ----------
 
