@@ -41,10 +41,6 @@ disease_df=read_bronze_csv("disease")
 
 # COMMAND ----------
 
-disease_df.groupBy("disease_name").count().show()
-
-# COMMAND ----------
-
 row_columns_count(disease_df)
 
 # COMMAND ----------
